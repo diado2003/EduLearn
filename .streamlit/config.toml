@@ -1,0 +1,12 @@
+[theme]
+base="dark"
+
+primaryColor = "#d0f1f5"
+linkColor = "#c4eff2"
+# Culoarea principală a textului
+# Codul hex pentru "darkGoldenrod"
+textColor = "#7af2ff"
+borderColor = "#c4eff2"
+showWidgetBorder=true
+font = "Poppins"
+

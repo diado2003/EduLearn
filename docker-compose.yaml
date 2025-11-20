@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # --- 1. Serviciul Keycloak ---
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    container_name: keycloak_server
+    # Mapăm portul Keycloak pe mașina gazdă (8082:8080)
+    ports:
+      - "8082:8080"
+    environment:
+      # Setează credențialele de admin
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: parola_secreta
+      # ATENȚIE: Aici folosim localhost:8082 pentru că asta este adresa publică
+      # la care Keycloak va genera URL-urile de redirecționare.
+      KC_HOSTNAME_URL: http://localhost:8082
+      # Pornește serverul Keycloak
+      KC_DB: dev-file # Folosește baza de date locală pe fișier, simplificând.
+    command: start-dev
+
+  # --- 2. Serviciul Streamlit ---
+  streamlit_app:
+    build: . # Folosește Dockerfile-ul din directorul curent
+    container_name: streamlit_app_container
+    # Mapăm portul Streamlit pe mașina gazdă (8501:8501)
+    ports:
+      - "8501:8501"
+    depends_on:
+      - keycloak # Asigură că încearcă să pornească Keycloak mai întâi
+    # Streamlit știe acum să acceseze http://keycloak:8080 (vezi app.py)
+    # dar browserul va accesa http://localhost:8501
