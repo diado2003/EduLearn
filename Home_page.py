@@ -4,7 +4,6 @@ from requests_oauthlib import OAuth2Session
 import urllib.parse
 import os
 from datetime import datetime
-
 from streamlit import divider
 
 st.logo("teddy.png", size="large")

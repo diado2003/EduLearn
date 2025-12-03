@@ -2,19 +2,23 @@ import streamlit as st
 import json
 import os
 from datetime import date, timedelta
+import random
+import time
+from Pages.Profil import get_badge_info
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    if st.button("Home", icon="🏠"):
+    if st.button("Home", icon="🏠", key="nav_home_quiz"):
         st.switch_page("Home_page.py")
 with col2:
-    if st.button("Quiz", icon="💯"):
+    if st.button("Quiz", icon="💯", key="nav_quiz_quiz"):
         st.switch_page("Pages/Quizz_List.py")
 with col3:
-    if st.button("ML", icon="🧠"):
+    if st.button("ML", icon="🧠", key="nav_ml_quiz"):
         st.switch_page("Pages/ML.py")
 with col4:
-    st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=True)  # Butonul curent dezactivat vizual
+    st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=True, key="nav_rank_quiz")  # Butonul curent dezactivat vizual
+
 
 st.divider()
 
@@ -59,25 +63,45 @@ def save_all_users(all_data):
         st.error(f"Eroare la salvare: {e}")
 
 
+# Asigură-te că importi funcția dacă e în alt fișier
+# from profil import get_badge_info
+
 def update_student_progress(username, xp_earned, quiz_name="General Quiz"):
-    """Logica principală de update."""
     all_data = load_all_users()
 
-    # Valori default
-    defaults = {"streak": 0, "last_quiz_date": None, "total_xp": 0, "history": []}
-    user_data = all_data.get(username, defaults)
+    # --- SETUP DEFAULT ---
+    # Default badge e primul din lista ta: Novice
+    default_badge = (0, "Novice", "gray")
 
-    # Asigurăm compatibilitatea cu history
-    if "history" not in user_data:
-        user_data["history"] = []
+    defaults = {
+        "streak": 0,
+        "last_quiz_date": None,
+        "total_xp": 0,
+        "history": [],
+        "current_badge": default_badge
+    }
+
+    user_data = all_data.get(username, defaults.copy())
+
+    # Compatibilitate cu date vechi
+    for key, val in defaults.items():
+        if key not in user_data:
+            user_data[key] = val
 
     today_str = str(date.today())
     last_date_str = user_data["last_quiz_date"]
 
-    # --- CALCUL STREAK ---
-    status = "neutral"
+    # --- 1. ACTUALIZARE XP ---
+    old_badge = user_data["current_badge"]
+
+    # Fix rapid: dacă badge-ul vechi e salvat greșit (doar string), îl resetăm
+    if not isinstance(old_badge, (list, tuple)):
+        old_badge = default_badge
+
     user_data["total_xp"] += xp_earned
 
+    # --- 2. CALCUL STREAK ---
+    status = "neutral"
     if last_date_str == today_str:
         status = "same_day"
     elif last_date_str == str(date.today() - timedelta(days=1)):
@@ -92,21 +116,29 @@ def update_student_progress(username, xp_earned, quiz_name="General Quiz"):
 
     user_data["last_quiz_date"] = today_str
 
-    # --- ADĂUGARE ÎN ISTORIC ---
+    # --- 3. CALCUL BADGE NOU (Folosind funcția ta) ---
+    new_badge = get_badge_info(user_data["total_xp"])
+    user_data["current_badge"] = new_badge
+
+    # Verificăm dacă numele badge-ului s-a schimbat (indexul 1 din tuplu)
+    # old_badge[1] este numele (ex: "Novice")
+    leveled_up = (new_badge[1] != old_badge[1])
+
+    # --- 4. ISTORIC ---
     new_entry = {
         "Date": today_str,
         "Quiz": quiz_name,
         "XP Gained": xp_earned,
-        "Streak Snapshot": user_data["streak"]
+        "Streak Snapshot": user_data["streak"],
+        "Badge Snapshot": new_badge[1]  # Salvăm doar numele în istoric
     }
     user_data["history"].append(new_entry)
 
-    # --- SALVARE ---
+    # --- 5. SALVARE ---
     all_data[username] = user_data
     save_all_users(all_data)
 
-    return user_data, status
-
+    return user_data, status, leveled_up
 
 # --- 2. INTERFAȚA GRAFICĂ (UI) ---
 
@@ -140,24 +172,49 @@ col2.metric("✨ XP", f"{stats.get('total_xp', 0)}")
 
 st.divider()
 
-# --- QUIZ ---
-st.subheader("Întrebare: Cât fac 5 * 5?")
-ans = st.number_input("Răspuns:", key="q_math", step=1)
+if 'a' not in st.session_state:
+    st.session_state.a = random.randint(1, 10)
+    st.session_state.b = random.randint(1, 10)
 
-if st.button("Trimite Răspuns"):
-    if ans == 25:
+# Preluăm numerele din memorie
+a = st.session_state.a
+b = st.session_state.b
+correct_sum = a + b
+
+# --- INTERFAȚA ---
+st.subheader(f"Întrebare: Cât fac {a} + {b}?")
+ans = st.number_input("Răspuns:", value=None, placeholder="Scrie un numar...", step=1, key="quiz_input")
+
+if st.button("Trimite Răspuns", key="submit_quiz_answer"):
+    if ans == correct_sum:
         st.balloons()
-        new_stats, status = update_student_progress(current_user, 50, "Math Multiplication")
 
+        # --- AICI ESTE CHEIA ---
+        # 1. Apelăm funcția ta REALĂ (asigură-te că nu are # în față)
+        # Presupunem că 'current_user' este definit undeva mai sus în codul tău
+        try:
+            new_stats, status, leveled_up = update_student_progress(current_user, 50, "Math Multiplication")
+        except NameError:
+            st.error("Eroare: Funcția 'update_student_progress' sau variabila 'current_user' nu sunt definite.")
+            st.stop()
+
+        # 2. Afișăm mesajele bazate pe ce a returnat funcția
         if status == "increased":
-            st.success(f"Bravo! Streak crescut la {new_stats['streak']}! 🔥")
+            st.success(f"Bravo! Ai acum {new_stats.get('xp', '???')} XP! Streak: {new_stats.get('streak', 0)} 🔥")
         elif status == "reset":
             st.warning("Streak resetat, dar ai început o serie nouă! 🚀")
         elif status == "same_day":
             st.info("XP adăugat! Streak-ul e deja marcat pe azi.")
         else:
-            st.success("Primul tău quiz! 🎉")
+            st.success("Răspuns corect! 🎉")
 
+        # 3. RESETĂM ÎNTREBAREA PENTRU TURA URMĂTOARE
+        del st.session_state.a
+        del st.session_state.b
+
+        # O mică pauză ca utilizatorul să vadă mesajul de succes înainte de refresh
+        time.sleep(1.5)
         st.rerun()
+
     else:
-        st.error("Greșit. Mai încearcă!")
+        st.error(f"Greșit. Mai încearcă! (Suma era {correct_sum})")

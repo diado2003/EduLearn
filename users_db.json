@@ -11,5 +11,106 @@
                 "Streak Snapshot": 1
             }
         ]
+    },
+    "diado3001": {
+        "streak": 1,
+        "last_quiz_date": "2025-12-03",
+        "total_xp": 600,
+        "history": [
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            }
+        ],
+        "current_badge": [
+            [
+                500,
+                "Apprentice",
+                "brown"
+            ],
+            [
+                1500,
+                "Scholar",
+                "silver"
+            ]
+        ]
     }
 }
