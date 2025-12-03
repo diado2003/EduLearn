@@ -1,6 +1,18 @@
 import streamlit as st
 from datetime import datetime
 
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    if st.button("Home", icon="🏠"):
+        st.switch_page("Home_page.py")
+with col2:
+    st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=True)
+with col3:
+    if st.button("ML", icon="🧠"):
+        st.switch_page("Pages/ML.py")
+
+st.divider()
 cola, colb,colc = st.columns(3)
 with colb:
     st.title("Quizz Time")

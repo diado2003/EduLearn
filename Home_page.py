@@ -73,7 +73,7 @@ with col6:
                 authorization_url, state = st.session_state['oauth'].authorization_url(AUTH_BASE_URL)
                 st.session_state['oauth_state'] = state
                 st.markdown(f'<a href="{authorization_url}" target="_self">Click aici pentru a te autentifica pe Keycloak</a>', unsafe_allow_html=True)
-                st.info("Veți fi redirecționat către Keycloak.")
+                # st.info("Veți fi redirecționat către Keycloak.")
             except Exception as e:
                 st.error(f"Eroare la generarea URL-ului de login: {e}")
 

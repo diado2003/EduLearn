@@ -1,0 +1,15 @@
+{
+    "test": {
+        "streak": 1,
+        "last_quiz_date": "2025-12-03",
+        "total_xp": 50,
+        "history": [
+            {
+                "Date": "2025-12-03",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1
+            }
+        ]
+    }
+}
