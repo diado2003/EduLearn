@@ -58,7 +58,7 @@ with col4:
         st.switch_page("Pages/Profil.py")
 
 with col5:
-    if st.button("Rank", icon="👨‍👦‍👦"):
+    if st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=False):
         st.switch_page("Pages/Rank.py")
 
 # Butonul de Login/Logout (simplificat)

@@ -8,16 +8,17 @@ from Pages.Profil import get_badge_info
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    if st.button("Home", icon="🏠", key="nav_home_quiz"):
+    if st.button("Home", icon="🏠"):
         st.switch_page("Home_page.py")
 with col2:
-    if st.button("Quiz", icon="💯", key="nav_quiz_quiz"):
+    if st.button("Profil", icon="🪪"):
         st.switch_page("Pages/Quizz_List.py")
 with col3:
-    if st.button("ML", icon="🧠", key="nav_ml_quiz"):
+    if st.button("ML", icon="🧠"):
         st.switch_page("Pages/ML.py")
 with col4:
-    st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=True, key="nav_rank_quiz")  # Butonul curent dezactivat vizual
+    if st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=False):
+        st.switch_page("Pages/Rank.py")
 
 
 st.divider()

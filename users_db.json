@@ -1,115 +1,201 @@
 {
-    "test": {
-        "streak": 1,
-        "last_quiz_date": "2025-12-03",
-        "total_xp": 50,
-        "history": [
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            }
-        ]
-    },
     "diado3001": {
         "streak": 1,
-        "last_quiz_date": "2025-12-03",
-        "total_xp": 600,
+        "last_quiz_date": "2025-12-04",
+        "total_xp": 300,
         "history": [
             {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
-                "Quiz": "Math Multiplication",
-                "XP Gained": 50,
-                "Streak Snapshot": 1
-            },
-            {
-                "Date": "2025-12-03",
+                "Date": "2025-12-04",
                 "Quiz": "Math Multiplication",
                 "XP Gained": 50,
                 "Streak Snapshot": 1,
                 "Badge Snapshot": [
-                    1500,
-                    "Scholar",
-                    "silver"
+                    500,
+                    "Apprentice",
+                    "brown"
                 ]
             },
             {
-                "Date": "2025-12-03",
+                "Date": "2025-12-04",
                 "Quiz": "Math Multiplication",
                 "XP Gained": 50,
                 "Streak Snapshot": 1,
                 "Badge Snapshot": [
-                    1500,
-                    "Scholar",
-                    "silver"
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
                 ]
             }
         ],
         "current_badge": [
             [
+                0,
+                "Novice",
+                "gray"
+            ],
+            [
                 500,
                 "Apprentice",
                 "brown"
+            ]
+        ]
+    },
+    "test": {
+        "streak": 1,
+        "last_quiz_date": "2025-12-04",
+        "total_xp": 200,
+        "history": [
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            }
+        ],
+        "current_badge": [
+            [
+                0,
+                "Novice",
+                "gray"
             ],
             [
-                1500,
-                "Scholar",
-                "silver"
+                500,
+                "Apprentice",
+                "brown"
+            ]
+        ]
+    },
+    "matei77": {
+        "streak": 1,
+        "last_quiz_date": "2025-12-04",
+        "total_xp": 150,
+        "history": [
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-04",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            }
+        ],
+        "current_badge": [
+            [
+                0,
+                "Novice",
+                "gray"
+            ],
+            [
+                500,
+                "Apprentice",
+                "brown"
             ]
         ]
     }

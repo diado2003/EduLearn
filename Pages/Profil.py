@@ -19,7 +19,8 @@ with col3:
     if st.button("ML", icon="🧠"):
         st.switch_page("Pages/ML.py")
 with col4:
-    st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=True)  # Butonul curent dezactivat vizual
+    if st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=False):
+        st.switch_page("Pages/Rank.py")
 
 st.divider()
 

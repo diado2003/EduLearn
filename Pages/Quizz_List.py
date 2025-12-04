@@ -2,15 +2,19 @@ import streamlit as st
 from datetime import datetime
 
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     if st.button("Home", icon="🏠"):
         st.switch_page("Home_page.py")
 with col2:
-    st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=True)
+    if st.button("Rank", icon="👨‍👨‍👦‍👦", disabled=False):
+        st.switch_page("Pages/Rank.py")
 with col3:
     if st.button("ML", icon="🧠"):
         st.switch_page("Pages/ML.py")
+with col4:
+    if st.button("Profil",icon="🪪"):
+        st.switch_page("Pages/Profil.py")
 
 st.divider()
 cola, colb,colc = st.columns(3)
