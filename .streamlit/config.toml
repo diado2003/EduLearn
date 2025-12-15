@@ -10,3 +10,12 @@ borderColor = "#c4eff2"
 showWidgetBorder=true
 font = "Poppins"
 
+#
+##[theme2]
+#base2 = "light"
+#primaryColor2 = "#d4cba5"
+#linkColor2 = "#807a63"
+#textColor2 = "#a69f81"
+#font2 = "Poppins"
+#showWidgetBorder2 = true
+

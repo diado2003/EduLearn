@@ -158,7 +158,7 @@ with c1:
         df['Cumulative XP'] = df['XP Gained'].cumsum()
         fig = px.area(df, x='Date', y='Cumulative XP', markers=True, color_discrete_sequence=['#636EFA'])
         fig.update_layout(xaxis_title="Data", yaxis_title="Total XP", height=350)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width='stretch')
     else:
         st.info("Rezolvă quiz-uri pentru a vedea graficul de progres.")
 
@@ -169,7 +169,7 @@ with c2:
         recent_df = df[['Date', 'Quiz', 'XP Gained']].sort_values(by="Date", ascending=False).head(5)
         # Formatare dată doar pentru afișare
         recent_df['Date'] = recent_df['Date'].dt.strftime('%Y-%m-%d')
-        st.dataframe(recent_df, hide_index=True, use_container_width=True)
+        st.dataframe(recent_df, hide_index=True, use_container_width='stretch')
     else:
         st.info("Niciun quiz recent.")
 

@@ -1,8 +1,8 @@
 {
     "diado3001": {
         "streak": 1,
-        "last_quiz_date": "2025-12-04",
-        "total_xp": 300,
+        "last_quiz_date": "2025-12-15",
+        "total_xp": 950,
         "history": [
             {
                 "Date": "2025-12-04",
@@ -69,18 +69,161 @@
                     "Apprentice",
                     "brown"
                 ]
+            },
+            {
+                "Date": "2025-12-05",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 2,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-05",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 2,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "Math Multiplication",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    500,
+                    "Apprentice",
+                    "brown"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "NLP",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "Supervised",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "Supervised",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "NLP",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "NLP",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "NLP",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "NLP",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "NLP",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "Supervised",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
+            },
+            {
+                "Date": "2025-12-15",
+                "Quiz": "Supervised",
+                "XP Gained": 50,
+                "Streak Snapshot": 1,
+                "Badge Snapshot": [
+                    1500,
+                    "Scholar",
+                    "silver"
+                ]
             }
         ],
         "current_badge": [
             [
-                0,
-                "Novice",
-                "gray"
-            ],
-            [
                 500,
                 "Apprentice",
                 "brown"
+            ],
+            [
+                1500,
+                "Scholar",
+                "silver"
             ]
         ]
     },

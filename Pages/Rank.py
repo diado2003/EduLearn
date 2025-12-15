@@ -90,7 +90,7 @@ def show_leaderboard():
         # --- TABEL DETALIAT ---
         st.dataframe(
             df,
-            use_container_width=True,
+            use_container_width='stretch',
             column_config={
                 "User": st.column_config.TextColumn("Jucător", width="medium"),
                 "XP": st.column_config.ProgressColumn(
